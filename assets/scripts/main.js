@@ -75,9 +75,9 @@ function createRecipeCards() {
 
   // Part 1 Expose - TODO
   
-  for (const property in recipeData) {
+  for (let i = 0; i < 3; i++) {
     const cardEle = document.createElement('recipe-card');
-    cardEle.data = recipeData[property];
+    cardEle.data = recipeData[recipes[i]];
     document.querySelector('main').appendChild(cardEle);
   }
 }
