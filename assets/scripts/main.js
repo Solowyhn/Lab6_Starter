@@ -102,14 +102,14 @@ function bindShowMore() {
         cardEle.data = recipeData[recipes[i]];
         document.querySelector('main').appendChild(cardEle);
       }
-      showMore.innerText = 'Show less';
+      showMore.innerText = "Show less";
     }
     else{
       const recipeCard = document.querySelectorAll('recipe-card');
       for (let i = 3; i < 6; i++) {
         recipeCard[i].remove();
       }
-      showMore.innerText = 'Show more';
+      showMore.innerText = "Show more";
     }
   })
 }
