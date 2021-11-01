@@ -123,6 +123,7 @@ class RecipeCard extends HTMLElement {
     const orgEle = document.createElement('p');
     orgEle.setAttribute('class', 'organization');
     orgEle.innerText = getOrganization(data);
+    card.appendChild(orgEle);
 
     // create rating elements and add corresponding attributes.
     const ratingOutEle = document.createElement('div');
