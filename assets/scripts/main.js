@@ -52,18 +52,17 @@ async function fetchRecipes() {
           }
           return response.json();
         })
-        .then(data => recipeData[recipeLink] = data)
+        .then(data => {
+          recipeData[recipeLink] = data
+          if (Object.keys(recipeData).length == recipes.length){
+            resolve(true);
+          }
+        })
         .catch(err => reject(err));
     })
 
     // check if the length of recipeDate is the same as the length of recipes
     // resolve if true, reject otherwise
-    if (Object.keys(recipeData).length == recipes.length){
-      resolve(true);
-    }
-    else{
-      reject(false);
-    }
   });
 }
 
