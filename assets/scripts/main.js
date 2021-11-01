@@ -53,7 +53,7 @@ async function fetchRecipes() {
           return response.json();
         })
         .then(data => {
-          recipeData[recipeLink] = data
+          recipeData[recipeLink] = data;
           if (Object.keys(recipeData).length == recipes.length){
             resolve(true);
           }
