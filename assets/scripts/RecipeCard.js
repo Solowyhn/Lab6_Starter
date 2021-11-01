@@ -106,7 +106,7 @@ class RecipeCard extends HTMLElement {
 
     // create thumbnail element and add corresponding attributes
     const thumbnailEle = document.createElement('img');
-    thumbnailEle.setAttribute('src', searchForKey(data, 'thumbnail'));
+    thumbnailEle.setAttribute('src', searchForKey(data, 'thumbnailUrl'));
     thumbnailEle.setAttribute('alt', title);
     card.appendChild(thumbnailEle);
 
